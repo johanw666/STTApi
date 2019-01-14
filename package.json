@@ -1,0 +1,33 @@
+{
+  "name": "sttapi",
+  "version": "0.0.2",
+  "description": "TypeScript Client API for Star Trek Timelines",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "postbuild": "node_modules/.bin/copyfiles -f lib/*.d.ts dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmPicard/STTApi.git"
+  },
+  "keywords": [],
+  "author": "IAmPicard",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/IAmPicard/STTApi/issues"
+  },
+  "homepage": "https://github.com/IAmPicard/STTApi#readme",
+  "devDependencies": {
+    "@types/node": "latest",
+    "copyfiles": "latest",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "unitiyfs-asset-parser": "latest",
+    "dexie": "latest"
+  }
+}
